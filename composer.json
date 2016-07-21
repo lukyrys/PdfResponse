@@ -18,7 +18,7 @@
         "castamir/pdf-response": "2.*"
     },
     "require": {
-        "mpdf/mpdf": "5.*"
+        "mpdf/mpdf": "6.*"
     },
     "require-dev": {
         "nette/application": "~2.2",
