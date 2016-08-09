@@ -1,6 +1,6 @@
 {
-    "name": "joseki/pdf-response",
-    "description": "Pdf response extension for Nette Framework",
+    "name": "lukyrys/pdf-response",
+    "description": "Fork of pdf-response, Pdf response extension for Nette Framework",
     "authors": [
         {
             "name": "Miroslav Paulík",
