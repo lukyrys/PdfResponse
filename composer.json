@@ -18,7 +18,7 @@
         "castamir/pdf-response": "2.*"
     },
     "require": {
-        "mpdf/mpdf": "v7.0.0"
+        "mpdf/mpdf": "v7.0.3"
     },
     "require-dev": {
         "nette/application": "~2.2",
@@ -39,7 +39,7 @@
         "symfony/dom-crawler": "Allows filtering html tags.",
         "nette/nette": "PHP framework to which this extension belongs to."
     },
-    "license": "LGPL-3.0",
+    "license": "LGPL-3.0-only",
     "autoload": {
         "classmap": ["src"]
     }
