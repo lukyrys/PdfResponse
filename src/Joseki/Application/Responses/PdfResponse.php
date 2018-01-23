@@ -9,7 +9,7 @@ use Nette\Http\IResponse;
 use Nette\Templating\ITemplate;
 use Nette\Utils\Strings;
 use Nette;
-use mPDF;
+use Mpdf\Mpdf as mPDF;
 use Symfony\Component\DomCrawler\Crawler;
 
 /**
@@ -272,7 +272,7 @@ class PdfResponse extends Nette\Object implements Nette\Application\IResponse
         if (!$this->mPDF instanceof mPDF) {
             $margins = $this->getMargins();
 
-            $mpdf = new mPDF('utf-8', // string $codepage
+            $mpdf = new mPDF(['utf-8', // string $codepage
                 $this->pageFormat, // mixed $format
                 '', // float $default_font_size
                 '', // string $default_font
@@ -282,7 +282,7 @@ class PdfResponse extends Nette\Object implements Nette\Application\IResponse
                 $margins["bottom"], // float $margin_bottom
                 $margins["header"], // float $margin_header
                 $margins["footer"], // float $margin_footer
-                $this->pageOrientation);
+                $this->pageOrientation]);
 
             $this->mPDF = $mpdf;
         }
