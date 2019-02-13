@@ -9,6 +9,7 @@ use Nette\Http\IResponse;
 use Nette\Templating\ITemplate;
 use Nette\Utils\Strings;
 use Nette;
+use Nette\SmartObject;
 use Mpdf\Mpdf as mPDF;
 use Symfony\Component\DomCrawler\Crawler;
 
@@ -31,8 +32,9 @@ use Symfony\Component\DomCrawler\Crawler;
  * @property string $pageFormat
  * @property string $pageMargins
  */
-class PdfResponse extends Nette\Object implements Nette\Application\IResponse
+class PdfResponse implements Nette\Application\IResponse
 {
+    use SmartObject;
     /** possible save modes */
     const INLINE = "I";
 
